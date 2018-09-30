@@ -20,6 +20,10 @@ public class User implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+        
+    @Column(name = "citizen_id")
+    @JsonIgnore
+    private Long citizen_id;
 
     @NotBlank
     private String firstname;
